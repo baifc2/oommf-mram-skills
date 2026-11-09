@@ -872,7 +872,7 @@ def run_wer_combo(cfg, outdir, dry_run=False):
         n_active = sum(1 for t in trajs.values() if t.status == "active")
         wer = max(0.0, total_w - switched_weight)
         wer_trace.append((te, wer, n_active,
-                          int(round(switched_weight / (total_w / n_traj))))
+                          int(round(switched_weight / (total_w / n_traj)))))
 
         # 归档每段结果（ODT 复制到组合目录的 trajectories/ 下）
         if not dry_run:
